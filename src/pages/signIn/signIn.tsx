@@ -85,18 +85,11 @@ export default function () {
           }}
         />
       </div>
-      <h2>OR</h2>
-      <SocialWrapper onClick={() => signInWithSocial("facebook")}>
-        <FacebookIcon />
-        FaceBook
-      </SocialWrapper>
-      <SocialWrapper onClick={() => signInWithSocial("google")}>
-        <GoogleIcon />
-        Google
-      </SocialWrapper>
-      <SocialWrapper onClick={() => signInWithSocial("github")}>
-        <GithubIcon />
-        GitHub
+      <h2>or</h2>
+      <SocialWrapper>
+        <FacebookIcon onClick={() => signInWithSocial("facebook")} />
+        <GithubIcon onClick={() => signInWithSocial("github")} />
+        <GoogleIcon onClick={() => signInWithSocial("google")} />
       </SocialWrapper>
     </AuthWrapperForm>
   );

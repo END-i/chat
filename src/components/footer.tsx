@@ -22,10 +22,11 @@ const Wrapper = styled.div`
     }
   }
 
-  @media only screen and (max-width: 480px) {
+  @media (max-width: 480px) {
     display: grid;
     justify-items: center;
     padding: 2px 10px;
+    letter-spacing: -1px;
   }
 `;
 

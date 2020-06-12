@@ -47,6 +47,9 @@ export const Input = styled.input<{ error?: string }>`
         error ? `138, 90, 90` : `134, 134, 134`
       }, 0.6);`}
   }
+  @media (max-width: 480px) {
+    padding: 5px 10px;
+  }
 `;
 
 export const Button = styled.div<{ disabled?: boolean }>`
@@ -79,6 +82,10 @@ export const Button = styled.div<{ disabled?: boolean }>`
       background: #0077ff;
     }
     `};
+  @media (max-width: 480px) {
+    min-width: 60px;
+    padding: 3px 0;
+  }
 `;
 
 export const AuthFormTitle = styled.h2`
@@ -90,23 +97,28 @@ export const AuthFormTitle = styled.h2`
 export const AuthWrapperForm = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 50px auto 0;
+  margin: 50px auto 50px;
   width: 350px;
   h2 {
     text-align: center;
     font-weight: 600;
+    @media (max-width: 480px) {
+      font-size: 1.5em;
+      margin: 5px 0;
+    }
+  }
+  @media (max-width: 480px) {
+    width: auto;
+    padding: 0 10px;
   }
 `;
 
 export const SocialWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-around;
   margin: 10px 0;
-  font-size: 1em;
   cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
   & > svg {
     width: 40px;
     height: 40px;

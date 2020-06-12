@@ -14,6 +14,9 @@ export const InputWrapper = styled.div`
   grid-template-columns: 1fr auto;
   grid-gap: 10px;
   margin: 10px 0;
+  @media (max-width: 480px) {
+    margin: 0 0 10px;
+  }
 `;
 export const Messages = styled.div`
   flex-grow: 1;
@@ -30,7 +33,7 @@ export const Message = styled.div<{ current: boolean }>`
   ${({ current }) =>
     current
       ? `
-    margin-left: auto;
+    margin-left: auto !important;
     background: #9cdcb0;`
       : `background: #a0daf7;`}
   padding: 10px;
@@ -40,6 +43,9 @@ export const Message = styled.div<{ current: boolean }>`
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 480px) {
+    margin: 5px;
+  }
 `;
 export const User = styled.div``;
 export const Name = styled.div`

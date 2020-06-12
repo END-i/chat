@@ -12,6 +12,9 @@ const Wrapper = styled.div`
   align-items: center;
   height: 45px;
   box-sizing: border-box;
+  @media (max-width: 480px) {
+    padding: 5px;
+  }
 `;
 
 const Button = styled.div`
@@ -23,12 +26,19 @@ const Button = styled.div`
   &:hover {
     background: #0000001a;
   }
+  @media (max-width: 480px) {
+    padding: 5px;
+    letter-spacing: -0.5px;
+  }
 `;
 const Logo = styled.div`
   font-size: 2em;
   margin-right: auto;
   cursor: pointer;
   user-select: none;
+  @media (max-width: 480px) {
+    font-size: 1.5em;
+  }
 `;
 
 const User = styled.div`
@@ -39,9 +49,19 @@ const User = styled.div`
   box-sizing: border-box;
   border-radius: 5px;
   height: inherit;
+  @media (max-width: 480px) {
+    letter-spacing: -1px;
+    padding: 0px 5px;
+  }
 `;
 const Name = styled.span`
   font-weight: 600;
+  @media (max-width: 480px) {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 120px;
+    overflow: hidden;
+  }
 `;
 const Avatar = styled.div<{ image: string }>`
   background: ${({ image }) => `url("${image}")`};
